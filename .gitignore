@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# But include these files and directories
+!.github/workflows/main.yml
+!.gitignore
+!calculator.py
+!test_calculator.py
