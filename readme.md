@@ -5,7 +5,7 @@
     echo "add 3 4" | python calculator.py
 
 4. Test the calculator script by running the test_calculator.py script:
- ```bash
+    ```bash
     python test_calculator.py
 
 5. Follow the steps in "Step 3" to set up a CI/CD pipeline using GitHub Actions.
