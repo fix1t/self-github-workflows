@@ -27,8 +27,8 @@ jobs:
     - name: Run tests and save results to a file
       run: python -m unittest test_calculator.py > test_results.txt
 
-    - name: Store test results in Firestore
-      run: |
-        test_results=$(cat test_results.txt)
-        firestore_url="https://firestore.googleapis.com/v1/projects/hw-test-5b55c/databases/(default)/documents/test_results/test_results?key=AIzaSyDrbZgqDXun4qv9j1Xqsevw-KOxPNFQ26U"
-        curl -X PATCH "$firestore_url" -H "Content-Type: application/json" -d "{\"fields\": {\"content\": {\"stringValue\": \"$test_results\"}}}"
+    # - name: Store test results in Firestore
+    #   run: |
+    #     test_results=$(cat test_results.txt)
+    #     firestore_url="https://firestore.googleapis.com/v1/projects/hw-test-5b55c/databases/(default)/documents/test_results/test_results?key=AIzaSyDrbZgqDXun4qv9j1Xqsevw-KOxPNFQ26U"
+    #     curl -X PATCH "$firestore_url" -H "Content-Type: application/json" -d "{\"fields\": {\"content\": {\"stringValue\": \"$test_results\"}}}"
